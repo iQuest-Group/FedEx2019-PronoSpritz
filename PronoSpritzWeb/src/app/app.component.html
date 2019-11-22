@@ -2,7 +2,7 @@
   <app-header-navigation [title]="title">
   </app-header-navigation>
 </header>
-<main class="{'content': isLoggedIn}">
+<main [ngClass]="{'fedex-content': isLoggedIn}">
   <router-outlet></router-outlet>
 </main>
 <footer>

@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AngularMaterialModule } from './angular-material.module';
 import { HeaderNavigationComponent } from './components/header-navigation/header-navigation.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,12 +13,16 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AngularMaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   exports: [
     AngularMaterialModule,
     HeaderNavigationComponent,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ]
 })
 export class SharedModule { }
