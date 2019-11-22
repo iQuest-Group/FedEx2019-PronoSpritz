@@ -1,0 +1,28 @@
+.competition-wrapper {
+  display: grid;
+  
+  .competition-name {
+    justify-self: center;
+    font-size: 36px;
+    width: fit-content;
+  }
+}
+
+.competition-container {
+  display: grid;
+  grid-auto-flow: column;
+  background: white;
+}
+
+.match-divider {
+  align-self: center;
+  justify-self: center;
+}
+
+.competition-time-info {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  background: white;
+  border-top: 1px solid #dadada;
+}

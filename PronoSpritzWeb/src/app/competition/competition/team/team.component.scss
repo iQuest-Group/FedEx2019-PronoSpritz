@@ -1,0 +1,11 @@
+.team-container {
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: center;
+  justify-items: center;
+
+  img {
+    width: 128px;
+    height: 128px;
+  }
+}
