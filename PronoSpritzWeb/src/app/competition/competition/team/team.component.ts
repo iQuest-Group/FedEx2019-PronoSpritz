@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { RequestService } from 'src/app/shared/services/request.service';
-import { MatchBetDto } from '../match-bet.dto';
+import { RequestService } from '../../../shared/services/request.service';
 
 @Component({
   selector: 'app-team',
@@ -25,6 +24,6 @@ export class TeamComponent implements OnInit {
       teamName: this.teamName,
       liveScore: this.liveScore,
       betScore: this.betScore
-    } as MatchBetDto);
+    });
   }
 }

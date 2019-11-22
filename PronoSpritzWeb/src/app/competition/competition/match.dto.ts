@@ -1,4 +1,4 @@
-export interface MatchBetDto {
+export interface MatchDto {
   teamImageUrl: string;
   teamName: string;
   liveScore: string;

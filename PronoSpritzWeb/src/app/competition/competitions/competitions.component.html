@@ -3,6 +3,9 @@
 </h3>
 <div *ngFor="let competition of competitions">
   <div class="competitions-container">
+    <div>
+        {{ competition.matchDayName }}
+      </div>
     <mat-card style="box-shadow: none;">
       <mat-card-header>
         <div mat-card-avatar class="header-image"></div>

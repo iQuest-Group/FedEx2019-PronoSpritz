@@ -23,6 +23,8 @@ export class LoginComponent implements OnInit {
       email: ['', [Validators.email, Validators.required]],
       password: ['', Validators.required]
     });
+
+    localStorage.setItem("access_token", "123");
   }
 
   onSubmit()
