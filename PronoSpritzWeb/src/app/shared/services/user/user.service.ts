@@ -26,7 +26,9 @@ export class UserService {
 
     return this.requestService.post('/Token', body, {
       headers
-    }).pipe(map((data: any) => data.access_token));
+    }).pipe(map((data: any) => {
+      localStorage.setItem('access_token', data.access_token);
+    }));
 
     // return this.requestService.post('Token', model);
 

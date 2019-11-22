@@ -11,34 +11,28 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  public hide: boolean = true;
+  public hide = true;
   public loginForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, 
-    private userService: UserService, 
-    private router: Router) { }
+  constructor(private formBuilder: FormBuilder,
+              private userService: UserService,
+              private router: Router) { }
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.email, Validators.required]],
       password: ['', Validators.required]
     });
-
-    localStorage.setItem("access_token", "123");
   }
 
-  onSubmit()
-  {
+  onSubmit() {
     const {email, password} = this.loginForm.value;
     this.userService.login(email, password).subscribe(() => {
       this.router.navigate(['login']);
     });
-
-    localStorage.setItem('access_token', 'asdasdsad');
   }
 
-  goToRegister()
-  {
+  goToRegister() {
     this.router.navigate(['register']);
   }
 }
