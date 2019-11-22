@@ -29,13 +29,7 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     const { email, password, confirmPassword } = this.registerForm.value;
     if (password === confirmPassword) {
-      this.userService.login(email, password).pipe(
-        catchError((error) => {
-          localStorage.setItem('token', 'asdsada');
-          this.router.navigate(['']);
-          throw error;
-        })
-      ).subscribe(() => {
+      this.userService.register({email, password, confirmPassword}).subscribe(() => {
         this.router.navigate(['']);
       });
     }

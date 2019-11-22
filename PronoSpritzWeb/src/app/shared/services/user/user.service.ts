@@ -10,12 +10,19 @@ export class UserService {
   constructor(private requestService: RequestService) { }
 
   public login(username: string, password: string) {
-    return this.requestService.post('/login', { username, password })
+    return this.requestService.post('/token', {  grant_type: 'password', username, password })
       .pipe(
         tap(
-          ({ token, refreshToken }: { token: string, refreshToken: string }) => {
-            localStorage.setItem('token', token);
-            localStorage.setItem('refreshToken', refreshToken);
+          ({ access_token }: { access_token: string }) => {
+            localStorage.setItem('access_token', access_token);
           }));
+  }
+
+  public register(register: {email: string, password: string, confirmPassword: string}){
+    return this.requestService.post('/api/Account/Register', register).pipe(
+      tap(
+        (response) => {
+          console.log(response);
+        }));
   }
 }

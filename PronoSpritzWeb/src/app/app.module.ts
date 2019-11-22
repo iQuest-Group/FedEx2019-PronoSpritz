@@ -7,6 +7,7 @@ import { AppRoutingModule } from './routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CompetitionModule } from './competition/competition.module';
 import { AuthenticateModule } from './authenticate';
+import { DashboardModule } from './dashboard';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AuthenticateModule } from './authenticate';
     AppRoutingModule,
     BrowserAnimationsModule,
     CompetitionModule,
-    AuthenticateModule
+    AuthenticateModule,
+    DashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

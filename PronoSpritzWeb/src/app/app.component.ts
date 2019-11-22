@@ -11,6 +11,6 @@ export class AppComponent {
   
   public get isLoggedIn()
   {
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem('access_token');
   }
 }

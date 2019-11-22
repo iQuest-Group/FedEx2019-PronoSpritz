@@ -28,14 +28,8 @@ export class LoginComponent implements OnInit {
   onSubmit()
   {
     const {email, password} = this.loginForm.value;
-    this.userService.login(email, password).pipe(
-      catchError((error) => {
-        localStorage.setItem('token', 'asdsada');
-        this.router.navigate(['']);
-        throw error;
-      })
-    ).subscribe(() => {
-      this.router.navigate(['']);
+    this.userService.login(email, password).subscribe(() => {
+      this.router.navigate(['login']);
     });
   }
 

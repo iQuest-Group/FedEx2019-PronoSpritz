@@ -30,6 +30,6 @@ export class RequestService {
 
   private buildUrl(relativeUrl): string
   {
-    return `${this.baseUrl}/${relativeUrl}`;
+    return `${this.baseUrl}${relativeUrl}`;
   }
 }

@@ -18,18 +18,17 @@ export class HeaderNavigationComponent implements OnInit {
 
   public get isLoggedIn()
   {
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem('access_token');
   }
 
   public login()
   {
-    this.router.navigate(['/login']);
+    this.router.navigate(['login']);
   }
 
   public logout()
   {
-    localStorage.removeItem('token');
-    localStorage.removeItem('refreshToken');
+    localStorage.removeItem('access_token');
     this.router.navigate(['']);
   }
 

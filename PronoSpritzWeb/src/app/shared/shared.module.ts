@@ -5,7 +5,8 @@ import { RequestService } from './services/request.service';
 import { HeaderNavigationComponent } from './components/header-navigation/header-navigation.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthorizationInterceptor } from './interceptor/authorization.interceptor';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,13 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [RequestService]
+  providers: [
+    RequestService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthorizationInterceptor,
+      multi: true
+  },
+  ]
 })
 export class SharedModule { }

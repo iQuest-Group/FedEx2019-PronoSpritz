@@ -5,10 +5,12 @@ import { CompetitionComponent } from '../competition/competition/competition.com
 import { LoginComponent } from '../authenticate/login/login.component';
 import { AuthorizedGuard } from './guard/authorized.guard';
 import { RegisterComponent } from '../authenticate/register/register.component';
+import { DashboardComponent } from '../dashboard/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: '', component: DashboardComponent, canActivate: [AuthorizedGuard] },
   { path: 'competitions', component: CompetitionsComponent, canActivate: [AuthorizedGuard] },
   { path: 'competitions/:competitionName', component: CompetitionComponent, canActivate: [AuthorizedGuard] }
 ];
