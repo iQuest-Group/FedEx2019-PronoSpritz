@@ -13,12 +13,13 @@ export class AuthorizationInterceptor implements HttpInterceptor {
         private router: Router) { }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        const token = localStorage.getItem('access_token');
+        const token = localStorage.getItem('access_token') || '';
         request = this.cloneRequest(request, token);
         return this.handleNext(request, next);
     }
 
     private handleNext(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        console.log(request);
         return next.handle(request).pipe(
             catchError((error: any) => {
                 if (error instanceof HttpErrorResponse && error.status == 401) {

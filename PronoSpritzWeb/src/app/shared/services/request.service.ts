@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
@@ -16,8 +16,8 @@ export class RequestService {
     return this.httpClient.get<T>(this.buildUrl(relativeUrl));
   }
 
-  public post<T>(relativeUrl: string, body: any): Observable<T> {
-    return this.httpClient.post<T>(this.buildUrl(relativeUrl), body);
+  public post<T>(relativeUrl: string, body: any, options?: { headers: HttpHeaders} ): Observable<T> {
+    return this.httpClient.post<T>(this.buildUrl(relativeUrl), body, options);
   }
 
   public put<T>(relativeUrl: string, body: any): Observable<T> {
