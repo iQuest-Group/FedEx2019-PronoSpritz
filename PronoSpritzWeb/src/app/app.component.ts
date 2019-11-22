@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'PronoSpritzWeb';
+  title = 'Prono Spritz';
+
+  
+  public get isLoggedIn()
+  {
+    return !!localStorage.getItem('token');
+  }
 }

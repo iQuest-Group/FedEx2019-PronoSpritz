@@ -1,0 +1,24 @@
+.app-bar
+{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    margin: 0 15px;
+    .app-name {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .app-header-navigation {
+        ul {
+            list-style-type: none;
+            padding: 0;
+            
+            li {
+                display: inline-block;
+                margin-left: 5px
+            }
+        }
+    }
+}

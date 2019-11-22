@@ -1,8 +1,8 @@
 <header>
-  <!-- <app-header-navigation>
-  </app-header-navigation> -->
+  <app-header-navigation [title]="title">
+  </app-header-navigation>
 </header>
-<main>
+<main class="{'content': isLoggedIn}">
   <router-outlet></router-outlet>
 </main>
 <footer>

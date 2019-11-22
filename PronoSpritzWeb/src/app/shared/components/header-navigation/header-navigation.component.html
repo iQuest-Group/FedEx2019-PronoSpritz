@@ -1,0 +1,15 @@
+<div class="app-bar">
+    <div class="app-name">
+        {{title}}
+    </div>
+    <div class="app-header-navigation">
+        <ul>
+            <li *ngIf="!isLoggedIn">
+                <a mat-button  routerLink="/login">Login</a>
+            </li>
+            <li *ngIf="isLoggedIn">
+                <a mat-button routerLink="/logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+</div>

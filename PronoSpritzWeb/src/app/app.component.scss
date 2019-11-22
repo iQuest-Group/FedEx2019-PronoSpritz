@@ -2,27 +2,39 @@ header
 {
     position: relative;
     height: 360px;
-    background-position: bottom;
-    background-origin: content-box;
-    background-size: cover;
-    background-image: url('../assets/prono-sprits-background.jpg');
+    
     &:before
     {
-        position: absolute;
-        content: ' ';
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: #1976d2;
-        opacity: .7;
+      position: absolute;
+      content: ' ';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-position: bottom;
+      background-origin: content-box;
+      background-size: cover;
+      background-image: url('../assets/prono-sprits-background.jpg');
+      z-index: -2;
+    }
+
+    &:after {
+      position: absolute;
+      content: ' ';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #1976d2;
+      opacity: .7;
+      z-index: -1;
     }
 }
 
 
 main
 {
-    max-width: 1600px;
+    max-width: 600px;
     background: white;
     width: 100%;
     min-height: 120px;
@@ -31,6 +43,11 @@ main
     z-index: 1;
     box-sizing: content-box;
     box-shadow: 0px 2px 6px 1px #9e9e9e;
+
+    &.content
+    {
+      max-width: 1600px;
+    }
 }
 
 
