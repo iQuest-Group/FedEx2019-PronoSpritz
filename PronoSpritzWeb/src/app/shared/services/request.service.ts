@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RequestService {
 
-  private baseUrl: string;
+  private baseUrl = environment.apiUrl;
 
-  constructor(private httpClient: HttpClient) { 
-
-  }
+  constructor(private httpClient: HttpClient) { }
 
   public get<T>(relativeUrl: string): Observable<T> {
     return this.httpClient.get<T>(this.buildUrl(relativeUrl));
