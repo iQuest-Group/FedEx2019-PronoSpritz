@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared';
 import { AppRoutingModule } from './routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularMaterialModule } from './angular-material.module';
+import { AngularMaterialModule } from './shared/angular-material.module';
 import { CompetitionModule } from './competition/competition.module';
 
 @NgModule({
@@ -17,7 +17,6 @@ import { CompetitionModule } from './competition/competition.module';
     SharedModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule,
     CompetitionModule
   ],
   providers: [],
