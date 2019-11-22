@@ -1,3 +1,3 @@
-export interface Competition {
+export interface CompetitionDto {
  name: string;
 }
