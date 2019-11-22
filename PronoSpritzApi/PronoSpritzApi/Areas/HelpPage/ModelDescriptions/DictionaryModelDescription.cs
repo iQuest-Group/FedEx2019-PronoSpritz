@@ -1,0 +1,6 @@
+namespace PronoSpritzApi.Areas.HelpPage.ModelDescriptions
+{
+    public class DictionaryModelDescription : KeyValuePairModelDescription
+    {
+    }
+}
