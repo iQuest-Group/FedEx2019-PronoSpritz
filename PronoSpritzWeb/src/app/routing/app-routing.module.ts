@@ -6,13 +6,15 @@ import { LoginComponent } from '../authenticate/login/login.component';
 import { AuthorizedGuard } from './guard/authorized.guard';
 import { RegisterComponent } from '../authenticate/register/register.component';
 import { DashboardComponent } from '../dashboard/dashboard/dashboard.component';
+import { PredictionComponent } from '../prediction/prediction/prediction.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: '', component: DashboardComponent, pathMatch: 'full', canActivate: [AuthorizedGuard] },
   { path: 'competitions', component: CompetitionsComponent, canActivate: [AuthorizedGuard] },
-  { path: 'competitions/:competitionName', component: CompetitionComponent, canActivate: [AuthorizedGuard] }
+  { path: 'competitions/:competitionName', component: CompetitionComponent, canActivate: [AuthorizedGuard] },
+  { path: 'predictions', component: PredictionComponent, canActivate: [AuthorizedGuard] }
 ];
 
 @NgModule({

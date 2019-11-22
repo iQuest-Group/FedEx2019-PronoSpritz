@@ -5,12 +5,12 @@ import { of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class GameService {
+export class MatchService {
 
   constructor(private requestService: RequestService) { }
 
-  public allMatches(competitionId: number)
+  public allMatches()
   {
-    return this.requestService.get(`/api/match/${competitionId}`);
+    return this.requestService.get(`/api/match`);
   }
 }

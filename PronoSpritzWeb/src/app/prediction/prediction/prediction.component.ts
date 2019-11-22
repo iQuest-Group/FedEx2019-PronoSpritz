@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PredictionService } from 'src/app/shared/services/prediction/prediction.service';
+import { MatchService } from 'src/app/shared/services/match/match.service';
 
 @Component({
   selector: 'app-prediction',
@@ -7,11 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PredictionComponent implements OnInit {
 
-  public predictions: [];
+  public predictions;
 
-  constructor() { }
+  constructor(
+    private matchService: MatchService,
+    private predictionService: PredictionService) { }
 
   ngOnInit() {
+    /*
+    forkJoin(this.matchService.allMatches(), this.predictionService.allPredictions())
+    .subscribe({
+      next: ([matches, predictions]) => {
+        this.predictions = matches.map((match) => {
+          return {
+            ...match,
+            prediction: predictions.find(prediction => prediction.MatchId === match.id)
+          }
+        })
+      }
+    });*/
   }
 
 
