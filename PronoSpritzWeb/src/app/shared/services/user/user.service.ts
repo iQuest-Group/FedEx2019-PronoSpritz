@@ -24,7 +24,7 @@ export class UserService {
 
     const body = urlSearchParams.toString();
 
-    return this.requestService.post('Token', body, {
+    return this.requestService.post('/Token', body, {
       headers
     });
 
