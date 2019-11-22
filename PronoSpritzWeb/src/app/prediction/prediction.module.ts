@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BetsComponent } from './bets/bets.component';
+import { PredictionComponent } from './prediction/prediction.component';
 import { SharedModule } from '../shared';
 
 
 
 @NgModule({
-  declarations: [BetsComponent],
+  declarations: [PredictionComponent],
   imports: [
     CommonModule,
     SharedModule
   ],
   exports: [
-    BetsComponent
+    PredictionComponent
   ]
 })
-export class BetsModule { }
+export class PredictionModule { }
