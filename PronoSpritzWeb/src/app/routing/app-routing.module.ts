@@ -1,8 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CompetitionsComponent } from '../competition/competitions/competitions.component';
+import { CompetitionComponent } from '../competition/competition/competition.component';
+import { LoginComponent } from '../authenticate/login/login.component';
+import { AuthorizedGuard } from './guard/authorized.guard';
+import { RegisterComponent } from '../authenticate/register/register.component';
 
-
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'competitions', component: CompetitionsComponent, canActivate: [AuthorizedGuard] },
+  { path: 'competitions/:competitionName', component: CompetitionComponent, canActivate: [AuthorizedGuard] }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,27 @@
+.team-container {
+  display: grid;
+  grid-auto-flow: row;
+  justify-content: center;
+  justify-items: center;
+  
+  .team-name {
+    font-size: 18px;
+  }
+
+  img {
+    width: 128px;
+    height: 128px;
+  }
+
+  .scores-container {
+    display: grid;
+    justify-items: center;
+    margin-top: 16px;
+
+    .bet-score {
+      .mat-form-field {
+        width: 60px;
+      }
+    }
+  }
+}

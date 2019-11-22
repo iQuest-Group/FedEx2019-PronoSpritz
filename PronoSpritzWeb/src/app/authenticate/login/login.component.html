@@ -1,0 +1,21 @@
+<div class="authenticate form-card">
+    <form [formGroup]="loginForm" (submit)="onSubmit()">
+        <mat-form-field>
+            <input matInput placeholder="Enter your email" formControlName="email" required>
+            <mat-error *ngIf="loginForm.get('email').invalid">Email is not valid</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'"
+                formControlName="password" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <div>
+            <button mat-button>Login</button>
+            <a mat-button (click)="goToRegister()">Register</a>
+        </div>
+    </form>
+</div>

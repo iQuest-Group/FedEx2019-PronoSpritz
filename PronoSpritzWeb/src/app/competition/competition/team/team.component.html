@@ -1,0 +1,21 @@
+<div class="team-container">
+    <img [src]="teamImageUrl">
+    <div class="team-name">
+    {{ teamName }}
+  </div>
+
+  <div class="scores-container">
+    <div class="team-live-score">
+      {{ liveScore }}
+    </div>
+    <div class="bet-score" (click)="bet()">
+      <mat-form-field>
+        <input type="number" matInput placeholder="Bet score" [(ngModel)]="betScore">
+      </mat-form-field>
+      
+        <!-- <div class="team-bet-score">
+            {{ betScore }}
+          </div> -->
+    </div>
+  </div>
+</div>

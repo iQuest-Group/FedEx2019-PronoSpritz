@@ -1,0 +1,35 @@
+<div class="competition-wrapper">
+  <div class="competition-name">
+    Champions league
+  </div>
+  <div class="competition-container-wrapper">
+    <div class="competition-container">
+      <app-team 
+      [teamImageUrl]="'https://material.angular.io/assets/img/examples/shiba1.jpg'" 
+      [teamName]="'Team1'"
+      [liveScore]="'0'" 
+      [betScore]="'1'">
+      </app-team>
+      <div class="match-divider">
+        VS
+      </div>
+      <app-team 
+        [teamImageUrl]="'https://material.angular.io/assets/img/examples/shiba1.jpg'" 
+        [teamName]="'Team2'"
+        [liveScore]="'0'" 
+        [betScore]="'2'">
+      </app-team>
+    </div>
+    <div class="competition-time-info">
+        <p>
+          Time left: 2h 53m or Live
+        </p>
+        <!-- <p>
+          Live
+        </p> -->
+    </div>
+    <div class="bet-button">
+      <button mat-raised-button color="primary">BET</button>
+    </div>
+  </div>
+</div>

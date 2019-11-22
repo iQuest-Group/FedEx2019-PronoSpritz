@@ -1,0 +1,18 @@
+.header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.competitions-header {
+  font-size: 36px;
+  text-align: center;
+}
+
+.competitions-container {
+  border-top: 1px solid #dadada;
+}
+
+a, a:hover, a:visited, a:link, a:active {
+  color: #0066cc;
+  text-decoration: none;
+}

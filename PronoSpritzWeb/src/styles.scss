@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+app-root
+{
+    height: 100%;
+    display: block;
+}
+
+.form-card
+{
+  padding: 40px;
+
+  form {
+      display: flex;
+      flex-direction: column;
+  
+      & > * {
+          width: 100%;
+          margin-bottom: 30px;
+      }
+  }
+}

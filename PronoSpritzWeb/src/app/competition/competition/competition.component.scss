@@ -1,0 +1,37 @@
+.competition-wrapper {
+  display: grid;
+  
+  .competition-name {
+    justify-self: center;
+    font-size: 36px;
+    width: fit-content;
+    color: #0066cc;
+  }
+}
+
+.competition-container {
+  display: grid;
+  grid-auto-flow: column;
+  background: white;
+  margin-top: 16px;
+}
+
+.match-divider {
+  align-self: center;
+  justify-self: center;
+  font-size: 24px;
+}
+
+.competition-time-info {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  background: white;
+  border-top: 1px solid #dadada;
+}
+
+.bet-button {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 16px;
+}
