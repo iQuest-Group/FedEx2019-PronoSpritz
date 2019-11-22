@@ -1,36 +1,39 @@
 <div class="competition-wrapper">
-  <h3 class="competition-name">
-    {{ competitionName }}
-  </h3>
-
-  <div class="competition-container-wrapper">
-    <div class="competition-container">
-      <app-team 
-      [teamImageUrl]="'https://material.angular.io/assets/img/examples/shiba1.jpg'" 
-      [teamName]="'Team1'"
-      [liveScore]="'0'" 
-      [betScore]="'1'">
-      </app-team>
-      <div class="match-divider">
-        VS
+    <h3 class="competition-name">
+      {{ competitionName }}
+    </h3>
+  
+  
+    <div class="competition-main-container">
+  
+      <h3 class="match-day-name">
+        Etapa 1
+      </h3>
+  
+    <div class="competition-container-wrapper mat-elevation-z3">
+      <div class="competition-container">
+        <app-team [match]="match">
+        </app-team>
+        <div class="match-divider">
+          VS
+        </div>
+        <app-team [match]="match">
+        </app-team>
       </div>
-      <app-team 
-        [teamImageUrl]="'https://material.angular.io/assets/img/examples/shiba1.jpg'" 
-        [teamName]="'Team2'"
-        [liveScore]="'0'" 
-        [betScore]="'2'">
-      </app-team>
-    </div>
-    <div class="competition-time-info">
-        <p>
+      <div class="competition-time-info">
+        <p *ngIf="!match.status">
           Time left: 2h 53m or Live
         </p>
-        <!-- <p>
+        <p *ngIf="match.status">
           Live
-        </p> -->
+        </p>
+      </div>
+      <div class="bet-button">
+        <button mat-raised-button color="primary">SUBMIT</button>
+      </div>
     </div>
-    <div class="bet-button">
-      <button mat-raised-button color="primary">BET</button>
+  
     </div>
+  
+  
   </div>
-</div>

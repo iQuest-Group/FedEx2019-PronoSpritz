@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RequestService } from '../../../shared/services/request.service';
+import { CompetitionService } from '../../../shared/services/competition/competition.service';
+import { MatchDto } from '../match.dto';
 
 @Component({
   selector: 'app-team',
@@ -7,23 +9,14 @@ import { RequestService } from '../../../shared/services/request.service';
   styleUrls: ['./team.component.scss']
 })
 export class TeamComponent implements OnInit {
-  @Input() teamImageUrl: string;
-  @Input() teamName: string;
-  @Input() liveScore: string;
-  @Input() betScore: string;
+  @Input() match: MatchDto;
 
-  constructor(private requestService: RequestService) { }
+  constructor(private competitionService: CompetitionService) { }
 
   ngOnInit() {
   }
 
   bet(): void {
-    this.requestService.post('/bet',
-    {
-      teamImageUrl: this.teamImageUrl,
-      teamName: this.teamName,
-      liveScore: this.liveScore,
-      betScore: this.betScore
-    });
+    this.competitionService.bet(this.match);
   }
 }
