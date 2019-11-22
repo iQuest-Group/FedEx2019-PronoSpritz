@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\PronoSpritzApi",
+    "\\PronoSpritzApi\\PronoSpritzApi",
+    "\\PronoSpritzApi\\PronoSpritzApi\\App_Start",
+    "\\PronoSpritzApi\\PronoSpritzApi\\Areas",
+    "\\PronoSpritzApi\\PronoSpritzApi\\bin",
+    "\\PronoSpritzApi\\PronoSpritzApi\\Controllers",
+    "\\PronoSpritzApi\\PronoSpritzApi\\fonts",
+    "\\PronoSpritzApi\\PronoSpritzApi\\Providers",
+    "\\PronoSpritzApi\\PronoSpritzApi\\Results"
+  ],
+  "SelectedNode": "\\PronoSpritzApi\\PronoSpritzApi\\Models\\IdentityModels.cs",
+  "PreviewInSolutionExplorer": false
+}
