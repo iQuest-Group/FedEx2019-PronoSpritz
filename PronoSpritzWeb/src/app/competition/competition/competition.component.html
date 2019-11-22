@@ -4,34 +4,33 @@
     </h3>
   
   
-    <div class="competition-main-container">
+    <div class="competition-main-container" *ngFor="let match of matches">
   
       <h3 class="match-day-name">
-        Etapa 1
+        {{ getMatchDay(match.MatchDay) }}
       </h3>
-  
-    <div class="competition-container-wrapper mat-elevation-z3">
-      <div class="competition-container">
-        <app-team [match]="match">
-        </app-team>
-        <div class="match-divider">
-          VS
+    
+      <div class="competition-container-wrapper mat-elevation-z3">
+        <div class="competition-container">
+          <app-team [teamName]="match.HomeTeam" [goals]="match.HomeGoals" [status]="match.Status">
+          </app-team>
+          <div class="match-divider">
+            VS
+            <div class="match-date" [innerHTML]="getDate(match)">
+            </div>
+          </div>
+          <app-team [teamName]="match.AwayTeam" [goals]="match.AwayGoals" [status]="match.Status">
+          </app-team>
         </div>
-        <app-team [match]="match">
-        </app-team>
-      </div>
-      <div class="competition-time-info">
-        <p *ngIf="!match.status">
-          Time left: 2h 53m or Live
-        </p>
-        <p *ngIf="match.status">
-          Live
-        </p>
-      </div>
-      <div class="bet-button">
-        <button mat-raised-button color="primary">SUBMIT</button>
-      </div>
-    </div>
+        <div class="competition-time-info">
+          <p>
+              {{ match.Status }}
+          </p>
+        </div>
+        <div class="bet-button" *ngIf="match.Status === 'SCHEDULED'">
+          <button mat-raised-button color="primary">SUBMIT</button>
+        </div>
+      </div>                
   
     </div>
   

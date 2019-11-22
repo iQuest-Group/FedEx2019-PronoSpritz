@@ -1,6 +1,5 @@
 ﻿using Microsoft.Owin.Security.OAuth;
 using System.Web.Http;
-using System.Web.Http.Cors;
 
 namespace PronoSpritzApi
 {
@@ -22,7 +21,7 @@ namespace PronoSpritzApi
 				defaults: new { id = RouteParameter.Optional }
 			);
 
-			config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+			//			config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
 		}
 	}
 }

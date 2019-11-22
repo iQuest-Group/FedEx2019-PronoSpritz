@@ -12,8 +12,8 @@ export class RequestService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public get<T>(relativeUrl: string,options?: { headers: HttpHeaders} ): Observable<T> {
-    return this.httpClient.get<T>(this.buildUrl(relativeUrl), options);
+  public get<T>(relativeUrl: string): Observable<T> {
+    return this.httpClient.get<T>(this.buildUrl(relativeUrl));
   }
 
   public post<T>(relativeUrl: string, body: any, options?: { headers: HttpHeaders} ): Observable<T> {
@@ -28,8 +28,7 @@ export class RequestService {
     return this.httpClient.delete<T>(this.buildUrl(relativeUrl));
   }
 
-  private buildUrl(relativeUrl): string
-  {
+  private buildUrl(relativeUrl): string {
     return `${this.baseUrl}${relativeUrl}`;
   }
 }

@@ -299,7 +299,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\prono-spritz - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\prono-spritz - FTP1.pubxml" />
     <None Include="Properties\PublishProfiles\prono-spritz - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\prono-spritz - ReadOnly - FTP1.pubxml" />
     <None Include="Properties\PublishProfiles\prono-spritz - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

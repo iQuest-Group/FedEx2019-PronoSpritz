@@ -12,4 +12,8 @@ export class CompetitionService {
   bet(match: MatchDto): Observable<MatchDto> {
     return this.requestService.post<MatchDto>('/bet', match);
   }
+
+  getCompetition(): Observable<MatchDto[]> {
+    return this.requestService.get<MatchDto[]>('/api/competitions/1/matches');
+  }
 }

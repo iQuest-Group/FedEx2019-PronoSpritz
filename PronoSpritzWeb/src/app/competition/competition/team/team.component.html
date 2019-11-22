@@ -1,21 +1,16 @@
 <div class="team-container">
-    <img [src]="match.teamImageUrl">
     <div class="team-name">
-    {{ match.teamName }}
+    {{ teamName }}
   </div>
 
   <div class="scores-container">
     <div class="team-live-score">
-      {{ match.liveScore }}
+      {{ goals }}
     </div>
-    <div class="bet-score" (click)="bet()">
+    <div class="bet-score">
       <mat-form-field>
-        <input type="text" matInput placeholder="Bet score" [(ngModel)]="match.predictionScore">
+        <input type="text" [disabled]="status !== 'SCHEDULED'" matInput placeholder="Prediction">
       </mat-form-field>
-      
-        <!-- <div class="team-bet-score">
-            {{ betScore }}
-          </div> -->
     </div>
   </div>
 </div>

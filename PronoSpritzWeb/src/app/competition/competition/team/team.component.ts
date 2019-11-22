@@ -9,14 +9,12 @@ import { MatchDto } from '../match.dto';
   styleUrls: ['./team.component.scss']
 })
 export class TeamComponent implements OnInit {
-  @Input() match: MatchDto;
+  @Input() teamName: string;
+  @Input() goals: string;
+  @Input() status: string;
 
   constructor(private competitionService: CompetitionService) { }
 
   ngOnInit() {
-  }
-
-  bet(): void {
-    this.competitionService.bet(this.match);
   }
 }
