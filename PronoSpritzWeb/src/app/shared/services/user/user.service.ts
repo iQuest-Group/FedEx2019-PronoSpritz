@@ -19,7 +19,11 @@ export class UserService {
   }
 
   public register(register: {email: string, password: string, confirmPassword: string}){
-    return this.requestService.post('/api/Account/Register', register).pipe(
+    return this.requestService.post('/api/Account/Register', {
+      "Email": register.email, 
+      "Password": register.password, 
+      "ConfirmPassword": register.confirmPassword
+    }).pipe(
       tap(
         (response) => {
           console.log(response);

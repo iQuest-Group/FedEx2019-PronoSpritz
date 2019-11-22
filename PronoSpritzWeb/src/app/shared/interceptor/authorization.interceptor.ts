@@ -2,24 +2,20 @@ import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpErrorResponse
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { catchError } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
 
+@Injectable({
+    providedIn: 'root'
+})
 export class AuthorizationInterceptor implements HttpInterceptor {
 
     constructor(
         private router: Router) { }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        if(request.url.toLowerCase().includes('token') || request.url.toLowerCase().includes('register'))
-        {
-            return this.handleNext(request, next);
-        }
-
         const token = localStorage.getItem('access_token');
-        if (token) {
-            request = this.cloneRequest(request, token);
-            return this.handleNext(request, next);
-        }
-        this.router.navigate(['login']);
+        request = this.cloneRequest(request, token);
+        return this.handleNext(request, next);
     }
 
     private handleNext(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
