@@ -10,5 +10,6 @@ namespace DataAccessLayer
         }
         public DbSet<Competition> Competitions { get; set; }
         public DbSet<FootballMatch> Matches { get; set; }
+        public DbSet<Prediction> Predictions { get; set; }
     }
 }

@@ -1,28 +1,41 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http;
 using DataAccessLayer;
 using DataAccessLayer.Model;
+using PronoSpritzApi.Models.Football;
 
 namespace PronoSpritzApi.Controllers
 {
     public class CompetitionsController : ApiController
     {
-        public IList<Competition> Get()
+        public IList<CompetitionDto> Get()
         {
             var dal = new Repository();
 
             var competitions = dal.GetCompetitions();
 
-            return competitions;
+            return competitions.Select(ToDto).ToList();
         }
 
-        public Competition Get(string code)
+        public CompetitionDto Get(int id)
         {
             var dal = new Repository();
 
-            var competition = dal.GetCompetition(code);
+            var competition = dal.GetCompetition(id);
 
-            return competition;
+            return ToDto(competition);
+        }
+
+        private CompetitionDto ToDto(Competition competition)
+        {
+            return new CompetitionDto
+            {
+                Code = competition.Code,
+                EmblemUrl = competition.EmblemUrl,
+                Id = competition.Id,
+                Name = competition.Name
+            };
         }
     }
 }

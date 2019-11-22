@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Prediction.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="Model\Competition.cs" />
     <Compile Include="FootballContext.cs" />

@@ -21,18 +21,19 @@ namespace ConsoleApplication
                 Code = competitionProxy.Code,
                 Name = competitionProxy.Name,
                 EmblemUrl = competitionProxy.EmblemUrl,
-                Matches = matchesProxy.Select(MapMatch).ToList()
+                Matches = matchesProxy.Select(x => MapMatch(x, competitionProxy.Id)).ToList()
             };
 
             var dal = new Repository();
             dal.AddCompetition(competition);
         }
 
-        private static FootballMatch MapMatch(FootballMatchModel match)
+        private static FootballMatch MapMatch(FootballMatchModel match, int competitionId)
         {
             return new FootballMatch
             {
-                MatchId = match.Id,
+                OriginalMatchId = match.Id,
+                CompetitionId = competitionId,
                 MatchDay = match.MatchDay,
                 StartTime = match.UtcDate,
                 AwayGoals = match.Score.FullTime.AwayTeam,
