@@ -10,7 +10,7 @@ import { DashboardComponent } from '../dashboard/dashboard/dashboard.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: '', component: DashboardComponent, canActivate: [AuthorizedGuard] },
+  { path: '', component: DashboardComponent, pathMatch: 'full', canActivate: [AuthorizedGuard] },
   { path: 'competitions', component: CompetitionsComponent, canActivate: [AuthorizedGuard] },
   { path: 'competitions/:competitionName', component: CompetitionComponent, canActivate: [AuthorizedGuard] }
 ];

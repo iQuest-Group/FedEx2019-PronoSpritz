@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { RequestService } from '../request.service';
-import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GameService {
+export class BetService {
 
   constructor(private requestService: RequestService) { }
 
-  public allMatches(competitionId: number)
+  public allBets()
   {
-    return this.requestService.get(`/api/match/${competitionId}`);
+    return this.requestService.get(`/api/bets`);
   }
 }
