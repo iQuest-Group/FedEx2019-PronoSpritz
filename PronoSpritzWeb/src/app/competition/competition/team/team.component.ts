@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { RequestService } from 'src/app/shared/services/request.service';
+import { MatchBetDto } from '../match-bet.dto';
 
 @Component({
   selector: 'app-team',
@@ -11,9 +13,18 @@ export class TeamComponent implements OnInit {
   @Input() liveScore: string;
   @Input() betScore: string;
 
-  constructor() { }
+  constructor(private requestService: RequestService) { }
 
   ngOnInit() {
   }
 
+  bet(): void {
+    this.requestService.post('/bet',
+    {
+      teamImageUrl: this.teamImageUrl,
+      teamName: this.teamName,
+      liveScore: this.liveScore,
+      betScore: this.betScore
+    } as MatchBetDto);
+  }
 }
