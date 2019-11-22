@@ -1,17 +1,17 @@
+<h3 class="competitions-header">
+  Competitions
+</h3>
 <div *ngFor="let competition of competitions">
-  <a [routerLink]="['./champions-league']">
-    <div class="competitions-header">
-        Competitions
+  <div class="competitions-container">
+    <mat-card style="box-shadow: none;">
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title>{{ competition.name }}</mat-card-title>
+        <mat-card-subtitle style="margin-bottom: 0;">{{ competition.area }}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+    <div class="join-button">
+      <button [routerLink]="['./', competition.name]" mat-raised-button color="primary">JOIN</button>
     </div>
-    <div class="competitions-container">
-      <mat-card style="box-shadow: none;">
-        <mat-card-header>
-          <div mat-card-avatar class="header-image"></div>
-          <mat-card-title>Champions league</mat-card-title>
-          <mat-card-subtitle>Europe</mat-card-subtitle>
-          <mat-card-subtitle>League name</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
-    </div>
-  </a>
+  </div>
 </div>

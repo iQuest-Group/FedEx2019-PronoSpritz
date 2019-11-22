@@ -13,8 +13,19 @@ export class CompetitionsComponent implements OnInit {
   constructor(private requestService: RequestService) { }
 
   ngOnInit() {
-    this.requestService.get<CompetitionDto[]>('/competitions').subscribe(response => {
-      this.competitions = response;
-    });
+    this.competitions = [
+      {
+        name: 'Champions league',
+        area: 'Europe'
+      },
+      {
+        name: 'League 2',
+        area: 'US'
+      }
+    ];
+
+    // this.requestService.get<CompetitionDto[]>('/competitions').subscribe(response => {
+    //   this.competitions = response;
+    // });
   }
 }

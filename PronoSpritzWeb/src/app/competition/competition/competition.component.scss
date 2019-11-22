@@ -2,10 +2,19 @@
   display: grid;
   
   .competition-name {
-    justify-self: center;
     font-size: 36px;
-    width: fit-content;
+    text-align: center;
+    margin: 0;
+    padding: 16px 0;
     color: #0066cc;
+  }
+
+  .competition-container-wrapper {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    margin-left: 20vw;
+    margin-right: 20vw;
   }
 }
 
@@ -14,6 +23,7 @@
   grid-auto-flow: column;
   background: white;
   margin-top: 16px;
+  width: 100%;
 }
 
 .match-divider {
@@ -28,6 +38,7 @@
   justify-content: center;
   background: white;
   border-top: 1px solid #dadada;
+  width: 100%;
 }
 
 .bet-button {
