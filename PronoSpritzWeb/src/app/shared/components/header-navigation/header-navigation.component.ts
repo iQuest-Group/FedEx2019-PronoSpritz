@@ -21,6 +21,11 @@ export class HeaderNavigationComponent implements OnInit {
     return !!localStorage.getItem('token');
   }
 
+  public login()
+  {
+    this.router.navigate(['/login']);
+  }
+
   public logout()
   {
     localStorage.removeItem('token');
