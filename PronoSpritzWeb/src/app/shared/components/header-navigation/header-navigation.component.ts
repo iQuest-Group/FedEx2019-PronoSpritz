@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header-navigation',
@@ -10,7 +11,7 @@ export class HeaderNavigationComponent implements OnInit {
   @Input()
   public title: string;
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -18,6 +19,13 @@ export class HeaderNavigationComponent implements OnInit {
   public get isLoggedIn()
   {
     return !!localStorage.getItem('token');
+  }
+
+  public logout()
+  {
+    localStorage.removeItem('token');
+    localStorage.removeItem('refreshToken');
+    this.router.navigate(['']);
   }
 
 }

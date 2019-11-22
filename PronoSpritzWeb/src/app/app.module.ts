@@ -6,6 +6,7 @@ import { SharedModule } from './shared';
 import { AppRoutingModule } from './routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CompetitionModule } from './competition/competition.module';
+import { AuthenticateModule } from './authenticate';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CompetitionModule } from './competition/competition.module';
     SharedModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CompetitionModule
+    CompetitionModule,
+    AuthenticateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
