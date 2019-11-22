@@ -12,8 +12,8 @@ export class RequestService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public get<T>(relativeUrl: string): Observable<T> {
-    return this.httpClient.get<T>(this.buildUrl(relativeUrl));
+  public get<T>(relativeUrl: string,options?: { headers: HttpHeaders} ): Observable<T> {
+    return this.httpClient.get<T>(this.buildUrl(relativeUrl), options);
   }
 
   public post<T>(relativeUrl: string, body: any, options?: { headers: HttpHeaders} ): Observable<T> {

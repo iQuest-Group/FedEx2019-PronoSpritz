@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CompetitionModule } from './competition/competition.module';
 import { AuthenticateModule } from './authenticate';
 import { DashboardModule } from './dashboard';
+import { PredictionModule } from './prediction';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DashboardModule } from './dashboard';
     BrowserAnimationsModule,
     CompetitionModule,
     AuthenticateModule,
-    DashboardModule
+    DashboardModule,
+    PredictionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

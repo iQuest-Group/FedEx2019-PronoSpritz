@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import { RequestService } from '../request.service';
-import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MatchService {
+export class LeaderboardService {
 
   constructor(private requestService: RequestService) { }
 
-  public allMatches()
+  public leaderboard()
   {
-    return this.requestService.get(`/api/match`);
+    return this.requestService.get(`/api/leaderboard`);
   }
 }
