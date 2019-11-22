@@ -1,4 +1,25 @@
 .dashboard
 {
     padding: 40px;
+    & > div 
+    {
+        display: flex;
+    }
+}
+
+.big-column
+{
+    width: 60%;
+    box-sizing: content-box;
+}
+
+.small-column
+{
+    width: 40%;
+    box-sizing: content-box;
+}
+
+.box-fancy
+{
+    padding: 40px;
 }
