@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PronoSpritzApi", "PronoSpritzApi\PronoSpritzApi.csproj", "{AE483836-AEFC-4E6D-810A-5DAC26893E1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballApiProxy", "FootballApiProxy\FootballApiProxy.csproj", "{BFF25BCC-236E-4978-B5E1-53E96707C410}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{E01FF448-DCAA-403F-AFDF-785977F63069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{2DF7DD26-3EC9-407C-8194-2458240233E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{AE483836-AEFC-4E6D-810A-5DAC26893E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE483836-AEFC-4E6D-810A-5DAC26893E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE483836-AEFC-4E6D-810A-5DAC26893E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF25BCC-236E-4978-B5E1-53E96707C410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF25BCC-236E-4978-B5E1-53E96707C410}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF25BCC-236E-4978-B5E1-53E96707C410}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF25BCC-236E-4978-B5E1-53E96707C410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E01FF448-DCAA-403F-AFDF-785977F63069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E01FF448-DCAA-403F-AFDF-785977F63069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E01FF448-DCAA-403F-AFDF-785977F63069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E01FF448-DCAA-403F-AFDF-785977F63069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF7DD26-3EC9-407C-8194-2458240233E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF7DD26-3EC9-407C-8194-2458240233E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF7DD26-3EC9-407C-8194-2458240233E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF7DD26-3EC9-407C-8194-2458240233E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
