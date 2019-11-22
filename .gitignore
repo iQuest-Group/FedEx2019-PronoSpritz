@@ -75,3 +75,10 @@ PronoSpritzApi/PronoSpritzApi/bin/Antlr3.Runtime.pdb
 PronoSpritzApi/PronoSpritzApi/bin/Antlr3.Runtime.dll
 PronoSpritzApi/PronoSpritzApi/bin/System.Web.Mvc.dll
 PronoSpritzApi/PronoSpritzApi/bin/System.Web.WebPages.Deployment.xml
+PronoSpritzApi/ConsoleApplication/bin/
+PronoSpritzApi/ConsoleApplication/obj/
+PronoSpritzApi/DataAccessLayer/bin/
+PronoSpritzApi/DataAccessLayer/obj/
+PronoSpritzApi/FootballApiProxy/bin/
+PronoSpritzApi/FootballApiProxy/obj/
+PronoSpritzApi/PronoSpritzApi/Properties/PublishProfiles

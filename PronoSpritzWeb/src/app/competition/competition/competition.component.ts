@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestService } from 'src/app/shared/services/request.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-competition',
@@ -7,10 +8,13 @@ import { RequestService } from 'src/app/shared/services/request.service';
   styleUrls: ['./competition.component.scss'],
 })
 export class CompetitionComponent implements OnInit {
+  competitionName: string;
 
-  constructor(private requestService: RequestService) { }
+  constructor(private requestService: RequestService, private router: ActivatedRoute) { }
 
   ngOnInit() {
+    this.router.paramMap.subscribe(params => {
+      this.competitionName = params.get('competitionName');
+    });
   }
-
 }
