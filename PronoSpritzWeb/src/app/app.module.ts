@@ -4,6 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared';
 import { AppRoutingModule } from './routing';
+import { RouterModule } from '@angular/router';
+import { CompetitionComponent } from './competition/competition/competition.component';
+
+const routes = [
+  { path: 'competition', component: CompetitionComponent }
+];
 
 @NgModule({
   declarations: [
@@ -12,7 +18,8 @@ import { AppRoutingModule } from './routing';
   imports: [
     BrowserModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
