@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { RequestService } from '../request.service';
-import { tap } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
 import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -26,7 +26,7 @@ export class UserService {
 
     return this.requestService.post('/Token', body, {
       headers
-    });
+    }).pipe(map((data: any) => data.access_token));
 
     // return this.requestService.post('Token', model);
 
